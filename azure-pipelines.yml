@@ -19,3 +19,11 @@ steps:
     echo "Secrets retrieved:"
     echo "  DB_UNAME: $DB_UNAME" 
     echo "  DB_PWD: $DB_PWD" 
+
+- task: GetConjurSecret@1
+  inputs:
+    conjurapplianceurl: '$(CONJUR_APPLIANCE_URL)'
+    conjuraccount: '$(CONJUR_ACCOUNT)'
+    conjurusername: '$(CONJUR_AUTHN_LOGIN )'
+    conjurapikey: '$(CONJUR_AUTHN_API_KEY)'
+    ignoreSsl: true
