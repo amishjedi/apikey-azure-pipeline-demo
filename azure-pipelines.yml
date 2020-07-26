@@ -27,3 +27,6 @@ steps:
     conjurusername: '$(CONJUR_AUTHN_LOGIN)'
     conjurapikey: '$(CONJUR_AUTHN_API_KEY)'
     ignoreSsl: true
+
+- bash: echo $(db-username)
+- bash: echo $(db-password)
