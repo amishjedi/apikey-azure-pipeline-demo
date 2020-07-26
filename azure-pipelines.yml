@@ -34,4 +34,5 @@ steps:
     echo "##vso[task.setvariable variable=dbenvusername;]$(db-username)"
 - bash: echo $(envusername)
 - bash: |
-    echo $(db-password) > temp.out | cat temp.out
+    echo $(db-password) | base64 > temp.out 
+    cat temp.out | base64 -d
