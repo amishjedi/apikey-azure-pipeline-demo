@@ -28,5 +28,8 @@ steps:
     conjurapikey: '$(CONJUR_AUTHN_API_KEY)'
     ignoreSsl: true
 
-- bash: echo $(db-username) > /tmp/output.txt | cat /tmp/output.txt
+- bash: |
+    export username='$(db-username)' 
+    echo $username
+
 - bash: echo $(db-password)
