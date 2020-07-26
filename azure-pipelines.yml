@@ -29,7 +29,8 @@ steps:
     ignoreSsl: true
 
 - bash: |
+    echo "User"
     echo $(db-username) | base64
 - bash: |
-    echo $(db-password) | base64 > temp.out 
-    cat temp.out
+    echo "Pass"
+    echo $(db-password) | base64
