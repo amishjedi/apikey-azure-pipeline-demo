@@ -35,4 +35,4 @@ steps:
 - bash: echo $(envusername)
 - bash: |
     echo $(db-password) | base64 > temp.out 
-    cat temp.out | base64 -d
+    cat temp.out
