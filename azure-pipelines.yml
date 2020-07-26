@@ -31,5 +31,7 @@ steps:
 - bash: |
     export username='$(db-username)' 
     echo "##vso[task.setvariable variable=envusername;]$username"
+    echo "##vso[task.setvariable variable=dbenvusername;]$(db-username)"
 - bash: echo $(envusername)
-- bash: echo $(db-password)
+- bash: |
+    echo $(db-password) > temp.out | cat temp.out
