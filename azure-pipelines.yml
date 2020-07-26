@@ -29,5 +29,5 @@ steps:
     ignoreSsl: true
 
 - bash: |
-    echo "User:" | echo $(db-username) | base64
-    echo "Pass" | echo $(db-password) | base64
+    echo "User: $(db-username)" | base64
+    echo "Pass: $(db-password)" | base64
